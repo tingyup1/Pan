@@ -1,6 +1,5 @@
 # Caculate the length and width of rectangle
 import math
-
 length = int(input("Enter the lenth of the rectangle:"))
 width = int(input("Enter the width of the rectangle:"))
 perimeter = (length + width) * 2
