@@ -1,13 +1,13 @@
 #1
 import random
-print("how many dice do you roll?")
-dice = [1,2,3,4,5,6]
-dice = input("roll the dice:")
-while dice !=dice:
-    dice = input("How many dice to roll?")
-    sum = dice+dice
-for n in dice:
-    print(f"sum is:{n}")
+numDices=int(input("How many dice to roll:"))
+result = 0
+
+for i in range(numDices):
+    rollDice = random.randint(1,6)
+    result+=rollDice
+print(result)
+
 
 
 #2
