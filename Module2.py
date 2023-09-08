@@ -1,6 +1,6 @@
 # 1
 user = input("Enter your name:\n")
-print("Hello," + user + "!")
+print("Hello," + user +"!")
 
 #2
 import math
