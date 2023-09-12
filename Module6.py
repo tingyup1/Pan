@@ -50,7 +50,29 @@ while num != int:
 
 
 #5
+def integrts_List(lst):
+    for i in lst:
+        if lst[i]%2==0:
+            print(f"even number:{lst[i]}")
+        else:
+            print(f"uneven number:{lst[i]}")
 
+list1=list(range(0,10000))
+integrts_List(list1)
+
+
+#6
+import math
+def cost_of_pizza():
+    diameter=int(input("enter the diameter of pizza:"))
+    pizzaCost=int(input("enter the cost of pizza:"))
+    pi = 3.1415926
+    areaPizza= math.pi * (diameter/2) ** 2
+    unit_cost_of_Pizza=pizzaCost/areaPizza
+    print(unit_cost_of_Pizza)
+    return
+
+cost_of_pizza()
 
 
 
