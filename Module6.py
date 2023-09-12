@@ -71,8 +71,10 @@ def cost_of_pizza():
     unit_cost_of_Pizza=pizzaCost/areaPizza
     print(unit_cost_of_Pizza)
     return
-
+diaPizza1=int(input("diameter:"))
+costPizza1=int(input("cost:"))
+diaPizza2=input("diameter:")
+costPizza1=int(input("cost:"))
 cost_of_pizza()
-
-
+cost_of_pizza()
 
