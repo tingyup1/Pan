@@ -66,11 +66,14 @@ import math
 def cost_of_pizza():
     diameter=int(input("enter the diameter of pizza:"))
     pizzaCost=int(input("enter the cost of pizza:"))
-    pi = 3.1415926
     areaPizza= math.pi * (diameter/2) ** 2
     unit_cost_of_Pizza=pizzaCost/areaPizza
-    print(unit_cost_of_Pizza)
-    return
+    return unit_cost_of_Pizza
 
-diaPizza1=cost_of_pizza()
-diaPizza2=cost_of_pizza()
+Pizza1= cost_of_pizza()
+Pizza2= cost_of_pizza()
+if Pizza1 > Pizza2:
+
+    print("You can choose pizza1")
+else:
+    print("You can choose pizza2")
