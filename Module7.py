@@ -15,3 +15,17 @@ elif month_number==12:
 
 
 #2
+while True:
+  new_name = input("Enter a name:")
+  names=set()
+  names.add(new_name)
+  print(names)
+  if new_name=='':
+    break
+
+
+#3
+
+
+
+
