@@ -20,33 +20,33 @@ while (inch_value>=1):
 
 
 
-
 #3
-num = (input("Enter a number:"))
-while num != str:
-    print(f"number:{num}")
-    num = int(input("Enter a number:"))
-print ("stop")
+list=[]
+num = input("enter a number,if want to quit,enter empty str:")
+while num != '':
+    num=input("enter a number,if want to quit,enter empty str:")
+    list.append(num)
+    print(max(list),min(list))
 
 
 #4
 import random
-guessesTaken = 0
-number = random.randint(1,10)
-print("I am thinking of a number bteween 1 and 10.")
+num=random.randint(1,10)
+guessNum=int(input("Enter a number(1-10):"))
+while True:
+    if guessNum<num:
+        print(f"random num is {num},Too low")
+    break
 
-while guessesTaken < 5:
-    print("Take a guess.")
-    guess = input()
-    guess= int(guess)
-    guessesTaken=guessesTaken+1
-    if guess > number:
-        print("Your guess is too high.")
-    if guess < number:
-        print("Your guess is too low.")
-    if guess == number:
-        print("You are right.")
+while True:
+    if guessNum>num:
+      print(f"random num is {num},Too high")
+    break
 
+while True:
+    if guessNum==num:
+      print(f"random num is {num},Correct")
+    break
 
 
 #5
