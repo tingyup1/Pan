@@ -11,31 +11,28 @@ print(result)
 
 
 #2
-input_List = []
-input_List.append(int(input("Enter a number:")))
+list=[]
 while True:
-    a=input("Do you want to input more:")
-    if a == "yes" or a=="YES":
-        input_List.append(int(input("Enter a number:")))
-    elif a== "":
-        input_List.sort(reverse=True)
+    num = input("Enter a number you want to add,if want to quit,enter empty string:")
+    list.append(num)
+    print(list)
+    if num == '':
+        list.remove(list[-1])
         break
-print(input_List)
+
+list.sort(reverse = True)
+print(list)
+
 
 
 #3
-num = int(input("Enter a number:"))
-if num > 1:
- for i in range(2,num):
-     if (num % i)==0:
-         print(num,"is not a prime number.")
-         break
-     else:
-         print(num,"is a prime number.")
-else:
-    print(num,"is not a prime number.")
 
-
+number=int(input("Enter a integer number:"))
+for i in range(number):
+    if number%1==0 and number%number==0:
+        print("Prime number")
+    else:
+        print("Not a prime number.")
 
 #4
 citiesInput = str(input("Enter five city name:"))
