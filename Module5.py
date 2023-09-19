@@ -9,7 +9,6 @@ for i in range(numDices):
 print(result)
 
 
-
 #2
 list=[]
 while True:
