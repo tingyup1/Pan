@@ -1,13 +1,12 @@
 # 1
 import random
 def rollDice():
-    return random.randint(1, 6)
-
-result = rollDice()
-print(f"roll number is: {result}")
-while result != 6:
+    roll=random.randint(1,6)
+    return roll
+result=rollDice()
+while result!=6:
     result = rollDice()
-    print(f"roll number is: {result}")
+    print(f"the result is {result}")
 
 
 # 2
@@ -23,42 +22,38 @@ while result != rollDice(max):
 
 
 # 3
-import math
-litre_pre_gallon = 3.78541178
-def convert(litre, Gallon):
-    return litre * litre_pre_gallon
-volume =0
-while volume >= 0:
-    volume = int(input("enter a volume in gallons:"))
-    print(volume * convert(1, 1))
-print("stop")
+def conversionn():
+    liter_per_gallon=3.78
+    liters=gallon*liter_per_gallon
+    print(f"Gallon converts to litrer is {liters}")
+
+gallon=int(input("Enter number of gallon you want to convert:"))
+while gallon>=0:
+    conversionn()
+    gallon = int(input("Enter number of gallon you want to convert:"))
+print("not valid")
 
 
 #4
-def sum_of_list(lst):
-  total = 0
-  for num in lst:
-    total +=num
-  return total
-
-my_list = []
-num=int(input("Do you want to add some number:"))
-while num != int:
-    num = int(input("Do you want to add some number:"))
-    my_list.append(num)
-    print(f"The sum of my_list is {sum_of_list(my_list)}")
+def sum_of_list(list):
+    sum=0
+    for num in list:
+        sum+=num
+    return sum
+list=[1,2,3,4,5,6,7,8]
+print(sum_of_list(list))
 
 
 #5
-def integrts_List(lst):
-    for i in lst:
-        if lst[i]%2==0:
-            print(f"even number:{lst[i]}")
-        else:
-            print(f"uneven number:{lst[i]}")
+def uneven_list(list):
+    for num in list:
+        num % 2 != 0
+        list = list.remove(num)
+    print(list)
 
-list1=list(range(0,10000))
-integrts_List(list1)
+
+list = [1, 2, 3, 4, 5, 6, 7, 8]
+uneven_list(list)
 
 
 #6
