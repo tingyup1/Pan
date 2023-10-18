@@ -84,7 +84,7 @@ class Car:
 
 car_list=[]
 carNum = 0
-for c in range(10):
+for i in range(10):
    carNum=carNum+1
    car_list.append(carNum)
 print(car_list)
@@ -92,6 +92,7 @@ c=Car()
 if c in car_list:
     if c.travel_distance>=10000:
         print(f'{c.registration_num},{c.travel_distance}')
+
 
 
 
