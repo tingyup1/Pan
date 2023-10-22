@@ -60,39 +60,53 @@ print(f'Current travel distance is {c1.travel_distance}')
 #4
 import random
 
+
 class Car:
+    def __init__(self, registration_num, maxi_speed, current_speed=0, travel_distance=0):
+        self.registration_num = registration_num
+        self.maxi_speed = maxi_speed
+        self.current_speed = current_speed
+        self.travel_distance = travel_distance
 
-    def __init__(self,registration_num,maxi_speed,current_speed=0,travel_distance=0):
-        self.registration_num=registration_num
-        self.maxi_speed=maxi_speed
-        self.current_speed=current_speed
-        self.travel_distance=travel_distance
-
-    def accelerate(self,delta_speed):
-        self.maxi_speed = random.randint(100, 201)
-        self.delta_speed=random.randint(-10,16)
+    def accelerate(self, delta_speed):
         self.current_speed += delta_speed
         if self.current_speed > self.maxi_speed:
             self.current_speed = self.maxi_speed
         elif self.current_speed < 0:
             self.current_speed = 0
-        return self.current_speed
-
-    def drive(self, constant_time):
-        self.travel_distance=int(self.travel_distance + (self.current_speed * constant_time))
         return
 
-car_list=[]
-carNum = 0
-for i in range(10):
-   carNum=carNum+1
-   car_list.append(carNum)
-print(car_list)
-c=Car()
-if c in car_list:
-    if c.travel_distance>=10000:
-        print(f'{c.registration_num},{c.travel_distance}')
+    def drive(self):
+        self.accelerate(random_speed(-10, 15))
+        distance = self.current_speed * 1
+        self.travel_distance += distance
+        print(f'Car {self.registration_num} has travelled {self.travel_distance}.')
 
+
+def random_speed(lower_limit, upper_limit):
+    return random.randint(lower_limit, upper_limit)
+
+
+def race():
+    reach_10000 = False
+    while not reach_10000:
+        for c in car_list:
+            c.drive()
+            if c.travel_distance >= 10000:
+                reach_10000 = True  # for while to stop
+                break  # don't change next car in the list
+
+
+# main starts here
+car_list = []
+for c in range(10):  # c = 0 -> 9
+    car = Car("ABC-" + str(c + 1), random_speed(100, 200))
+    car_list.append(car)
+
+print(car_list)
+
+race()
+print(car_list)
 
 
 
