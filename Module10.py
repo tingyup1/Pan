@@ -137,4 +137,5 @@ building=Building(0,10,2)
 building.run_elevator(1,6)
 building.fire_alarm()
 
+#4
 
