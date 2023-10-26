@@ -1,20 +1,29 @@
 #1
-class Book:
-    def __init__(self,name,author,page_count):
-        self.name=name
-        self.author=author
-        self.page_count=page_count
-
-class  Chief_editor(Book):
-    def __init__(self,name,author,page_count,chief):
-        Book.__init__(self,name,author,page_count)    #or super().__init__(name,author,page_count)
-        self.chief=chief
-
+class Publication:
+    def __init__(self,P_name):
+        self.Pname=P_name
     def print_information(self):
-        print(f'Book name:{self.name},Author:{self.author},Page count:{self.page_count},Chief_editor:{self.chief}')
-book=Book( 'Donald Duck','Rosa Liksom',192)
-book=Chief_editor('Donald Duck','Rosa Liksom',192, 'Aki Hyyppä')
+        print(f'This publication name is {self.Pname}')
+class Book(Publication):
+    def __init__(self,Pname,author,page_count):
+        Publication.__init__(self,Pname)
+        self.author=author
+        self.pagr_count=page_count
+    def print_information(self):
+        Publication.print_information(self)
+        print(f'{self.Pname} author is {self.author} page count:{self.pagr_count}')
+class Magazine(Publication):
+    def __init__(self,Pname,chief):
+        Publication.__init__(self,Pname)
+        self.chief_editor=chief
+    def print_information(self):
+        Publication.print_information(self)
+        print(f'{self.Pname} have a chief editor :{self.chief_editor}')
+book=Book('Compartment NO.6','Rose Liksom',192)
+magazine=Magazine('Donald Duck','Aki Hyyppaa')
 book.print_information()
+magazine.print_information()
+
 
 #2
 class Car:
